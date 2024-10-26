@@ -52,7 +52,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://via.placeholder.com/1200x400');
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./resources/2.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -115,8 +115,16 @@
         }
         .feature-card h3 {
             font-size: 1.4rem;
-            color: #4CAF50;
+            color: #4CAF50; /* Change h3 color to green */
             margin-bottom: 10px;
+            text-decoration: none; /* No underline by default */
+        }
+        .feature-card h3 a {
+            color: #4CAF50; /* Make link text green */
+            text-decoration: none; /* No underline by default */
+        }
+        .feature-card h3 a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .feature-card p {
             color: #555;
@@ -164,96 +172,21 @@
     </nav>
 </header>
 
+<script>
+    function scrollToFeatures() {
+        document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
         <h2>Your Health, Our Priority</h2>
         <p>Access step tracking, medical advice, emergency assistance, and more at your fingertips.</p>
-        <button onclick="alert('Welcome to HealthSpace!')">Get Started</button>
+        <button onclick="scrollToFeatures()">Get Started</button>
     </div>
 </section>
-
-<style>
-    /* Updated Hero Section Styles */
-    .hero {
-        position: relative;
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-            url('./resources/2.jpg') no-repeat center center / cover;
-        color: white;
-        padding: 120px 20px;
-        text-align: center;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-content {
-        max-width: 800px;
-        animation: fadeIn 1.2s ease-out;
-    }
-
-    .hero h2 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        line-height: 1.2;
-        color: #4CAF50;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-        animation: slideInDown 1s ease-out forwards;
-    }
-
-    .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-        color: #e0e0e0;
-        line-height: 1.6;
-        animation: slideInUp 1.2s ease-out forwards;
-    }
-
-    .hero button {
-        padding: 15px 30px;
-        font-size: 1.1rem;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 30px;
-        color: #333;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-    }
-
-    .hero button:hover {
-        background-color: #0c4adc;
-        transform: scale(1.05);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInDown {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Responsive Hero Section */
-    @media (max-width: 768px) {
-        .hero h2 {
-            font-size: 2.5rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-        }
-    }
-</style>
 
 
 <!-- Features Section -->
@@ -261,35 +194,35 @@
     <!-- Walking Steps Tracker -->
     <div class="feature-card">
         <img src="./resources/walk.png" alt="Walking Icon">
-        <h3>Walking Steps Tracker</h3>
+        <h3><a href="fitness.html">Walking Steps Tracker</a></h3>
         <p>Track your steps daily and stay motivated on your fitness journey.</p>
     </div>
 
     <!-- Nearby Hospitals Locator -->
     <div class="feature-card">
         <img src="./resources/hospital.png" alt="Hospital Icon">
-        <h3>Nearby Hospitals</h3>
+        <h3><a href="https://www.google.com/maps/search/hospitals+near+me">Nearby Hospitals</a></h3>
         <p>Find nearby hospitals and get quick directions in case of an emergency.</p>
     </div>
 
     <!-- Medical Recommendations -->
     <div class="feature-card">
         <img src="./resources/care.jpg" alt="Medical Advice Icon">
-        <h3>Medical Recommendations</h3>
+        <h3><a href="medical_advice.html">Medical Recommendations</a></h3>
         <p>Receive personalized health advice based on your symptoms.</p>
     </div>
 
     <!-- Accessible Medicine Delivery -->
     <div class="feature-card">
         <img src="./resources/deli.png" alt="Medicine Delivery Icon">
-        <h3>Medicine Delivery</h3>
+        <h3><a href="medicine_delivery.html">Medicine Delivery</a></h3>
         <p>Order medicines conveniently and have them delivered to your door.</p>
     </div>
 
     <!-- Emergency Conditions Management -->
     <div class="feature-card">
         <img src="./resources/eme.png" alt="Emergency Icon">
-        <h3>Emergency Assistance</h3>
+        <h3><a href="emergency_assistance.html">Emergency Assistance</a></h3>
         <p>Get instant help during emergencies with one-tap SOS functionality.</p>
     </div>
 </section>
