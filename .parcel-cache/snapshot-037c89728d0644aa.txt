@@ -1,6 +1,6 @@
 3933
 80C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\cors133744460309578746 1
-81C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\scripts\fitness.js133744516717518575 0
+81C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\scripts\fitness.js133744532821986711 0
 70C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\LICENSE133744293177732652 0
 102C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\node-forge\flash\README.md133744416262915938 0
 95C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\lru-cache\README.md133744416262008365 0
@@ -3927,8 +3927,8 @@
 89C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\.bin\mime.cmd133744444437950202 0
 89C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\.bin\uuid.cmd133744416823110751 0
 89C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\node_modules\.bin\uuid.ps1133744416823110751 0
-80C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\html\fitness.html133744522898361013 0
+80C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\html\fitness.html133744533486058263 0
 80C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\dist\fitness.html133744502294581428 0
 87C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\dist\fitness.75e93615.js133744502296705500 0
 69C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\styles133744521639913268 1
-81C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\styles\fitness.css133744521733781931 0
+81C:\Users\Admin\OneDrive\Desktop\Hackathon\hackaura\hackaura-24\styles\fitness.css133744532859413223 0
