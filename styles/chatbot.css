@@ -79,4 +79,15 @@
     color: red; /* Red color for error messages */
     margin-top: 10px; /* Space above error messages */
   }
+  .markdown {
+    line-height: 1.5;
+  }
   
+  .markdown h1, .markdown h2, .markdown h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .markdown p {
+    margin: 5px 0;
+  }

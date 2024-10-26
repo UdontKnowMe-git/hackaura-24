@@ -1,5 +1,6 @@
 // Import GoogleGenerativeAI from the npm package
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { marked } from 'marked'; // Import marked for Markdown support
 
 // Initialize the API client with your API key
 const genAI = new GoogleGenerativeAI('AIzaSyCMTVPR2xlE22wDD6ST1mF4UigPgwHEJJQ');
@@ -18,10 +19,12 @@ async function sendMessage() {
   try {
     // Generate content using the AI model
     const result = await model.generateContent(userInput);
+    
+    // Ensure we get the text response
+    const botReply = await result.response.text();
 
-    // Display the chatbot's response
-    const botReply = await result.response.text(); // Ensure we get the text response
-    messagesDiv.innerHTML += `<div><strong>Chatbot:</strong> ${botReply}</div>`;
+    // Render the chatbot's response with Markdown support
+    messagesDiv.innerHTML += `<div><strong>Chatbot:</strong> ${marked(botReply)}</div>`; // Convert Markdown to HTML
   } catch (error) {
     messagesDiv.innerHTML += `<div><strong>Error:</strong> ${error.message}</div>`;
   }
