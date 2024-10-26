@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        <button id="connect">Connect to Device</button>
+        <div id="status" class="status">Disconnected</div>
+
+        <div class="metrics">
+            <div id="heartRate" class="metric">Heart Rate: -- BPM</div>
+            <div id="ecg" class="metric">ECG: -- mV</div>
+            <div id="steps" class="metric">Steps: --</div>
+        </div>
+
+        <canvas id="heartRateChart" class="chart"></canvas>
+        <canvas id="stepsChart" class="chart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
