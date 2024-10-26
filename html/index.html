@@ -1,5 +1,186 @@
-<html>
-    <body>
-        <h1>hello</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSpace</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header, .features, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .hero button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 280px;
+        }
+        .feature-card img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>HealthCare Portal</h1>
+    <nav>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Your Health, Our Priority</h2>
+    <p>Access step tracking, medical advice, emergency assistance, and more at your fingertips.</p>
+    <button onclick="alert('Welcome to HealthCare Portal!')">Get Started</button>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <!-- Walking Steps Tracker -->
+    <div class="feature-card">
+        <img src="https://via.placeholder.com/80" alt="Walking Icon">
+        <h3>Walking Steps Tracker</h3>
+        <p>Track your steps daily and stay motivated on your fitness journey.</p>
+    </div>
+
+    <!-- Nearby Hospitals Locator -->
+    <div class="feature-card">
+        <img src="https://via.placeholder.com/80" alt="Hospital Icon">
+        <h3>Nearby Hospitals</h3>
+        <p>Find nearby hospitals and get quick directions in case of an emergency.</p>
+    </div>
+
+    <!-- Medical Recommendations -->
+    <div class="feature-card">
+        <img src="https://via.placeholder.com/80" alt="Medical Advice Icon">
+        <h3>Medical Recommendations</h3>
+        <p>Receive personalized health advice based on your symptoms.</p>
+    </div>
+
+    <!-- Accessible Medicine Delivery -->
+    <div class="feature-card">
+        <img src="https://via.placeholder.com/80" alt="Medicine Delivery Icon">
+        <h3>Medicine Delivery</h3>
+        <p>Order medicines conveniently and have them delivered to your door.</p>
+    </div>
+
+    <!-- Emergency Conditions Management -->
+    <div class="feature-card">
+        <img src="https://via.placeholder.com/80" alt="Emergency Icon">
+        <h3>Emergency Assistance</h3>
+        <p>Get instant help during emergencies with one-tap SOS functionality.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 heathspace. All Rights Reserved.</p>
+</footer>
+
+</body>
 </html>
