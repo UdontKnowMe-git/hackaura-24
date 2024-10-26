@@ -35,12 +35,16 @@ $ git config --global user.email johndoe@example.com
 `git clone https://github.com/UdontKnowMe-git/hackaura-24`
 
 - This will add the repository to ur pc then you can start editing and stuff
-```git branch new-branch-name
-git checkout new-branch-name```
+```
+git branch new-branch-name
+git checkout new-branch-name
+```
 
 - Before starting any edits to code, make sure to create a seperate branch and then merge only if you find no errors in your current working branch
 
 - After making changes write the following sequence of commands to push your changes to github
-```git add .
+```
+git add .
 git commit -m "Commit message"
-git push origin your-branch-name```
+git push origin your-branch-name
+```
