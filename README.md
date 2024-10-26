@@ -26,8 +26,10 @@ We will stick to python for backend tasks such as API calls and live chat
 Quick github tutorial: 
 - First install Git from https://git-scm.com/
 - Set up git using:
-```$ git config --global user.name "John Doe"
-$ git config --global user.email johndoe@example.com```
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
 - Then go to this repository and copy its link,
 - Go to vscode or terminal and type in 
 `git clone https://github.com/UdontKnowMe-git/hackaura-24`
