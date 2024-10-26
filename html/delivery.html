@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Drone Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #map {
+            height: 500px;
+            width: 65%;
+            border: 2px solid #ccc;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .controls button, .controls select {
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .controls button:hover, .controls select:hover {
+            background-color: #388E3C;
+        }
+
+        .controls h2 {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Control options on the right -->
+    <div class="controls">
+        <h2>Emergency Options</h2>
+        <select id="medicine-select">
+            <option value="">Select Medicine</option>
+            <option value="Aspirin">Aspirin</option>
+            <option value="Ibuprofen">Ibuprofen</option>
+            <option value="Paracetamol">Paracetamol</option>
+            <option value="Amoxicillin">Amoxicillin</option>
+            <option value="Benadryl">Benadryl</option>
+            <option value="Bandages">First aid kit</option>
+            <option value="Pain relievers">Pain relievers</option>
+            <option value="Defibrillator">Defibrillator</option>
+        </select>
+        <button id="book-medicine">Book Emergency Medicine</button>
+        <button id="sos">SOS</button>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map');
+
+        // Set up the OSM layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Check if the browser supports geolocation
+        if (navigator.geolocation) {
+            // Get the user's current position
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                
+                // Set the map view to the user's location
+                map.setView([lat, lng], 13);
+
+                // Add a marker at the user's location
+                var userMarker = L.marker([lat, lng]).addTo(map)
+                    .bindPopup('You are here!')
+                    .openPopup();
+
+                // Function to generate random drones near user's location
+                function generateDrones() {
+                    var drones = [
+                        { id: 'shah-1', lat: lat + 0.01, lng: lng + 0.01 }, // 1 km east and north
+                        { id: 'shah-2', lat: lat - 0.01, lng: lng - 0.01 }  // 1 km west and south
+                    ];
+
+                    drones.forEach(drone => {
+                        var marker = L.marker([drone.lat, drone.lng]).addTo(map)
+                            .bindPopup(`<b>Drone: ${drone.id}</b><br>Emergency Drone in Area. (simulation)`)
+                            .openPopup();
+                    });
+                }
+
+                // Generate the drones
+                generateDrones();
+
+            }, function(error) {
+                alert('Geolocation failed. Please allow location access.');
+            });
+        } else {
+            alert('Geolocation is not supported by your browser.');
+        }
+
+        // Button actions for booking emergency medicine and SOS
+        document.getElementById('book-medicine').addEventListener('click', function() {
+            var selectedMedicine = document.getElementById('medicine-select').value;
+            if (selectedMedicine) {
+                alert('Booking emergency medicine: ' + selectedMedicine);
+            } else {
+                alert('Please select a medicine to book.');
+            }
+        });
+
+        document.getElementById('sos').addEventListener('click', function() {
+            alert('Sending SOS signal...');
+        });
+
+    </script>
+</body>
+</html>
