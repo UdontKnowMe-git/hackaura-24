@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+  }
+  
+  #chat-container {
+    background-color: #ffffff; /* White background for the chat */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Fixed width for chat container */
+    max-width: 100%; /* Responsive width */
+    overflow: hidden;
+  }
+  
+  h2 {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text for header */
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #messages {
+    padding: 15px;
+    height: 300px; /* Fixed height for message area */
+    overflow-y: auto; /* Scroll for overflow */
+    border-bottom: 1px solid #e0e0e0; /* Light gray border for separation */
+  }
+  
+  #messages div {
+    margin-bottom: 10px; /* Space between messages */
+  }
+  
+  strong {
+    display: inline-block;
+  }
+  
+  #user-input {
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    margin: 10px 0; /* Spacing above and below input */
+  }
+  
+  button {
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text for button */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Full width button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button:focus {
+    outline: none; /* Remove outline on focus */
+  }
+  
+  #error-message {
+    color: red; /* Red color for error messages */
+    margin-top: 10px; /* Space above error messages */
+  }
+  .markdown {
+    line-height: 1.5;
+  }
+  
+  .markdown h1, .markdown h2, .markdown h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .markdown p {
+    margin: 5px 0;
+  }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSpace</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #4CAF50, #2e8b57);
+            color: white;
+            padding: 20px 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./resources/2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+        .hero button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            background-color: #ffdd57;
+            border: none;
+            border-radius: 30px;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #ffca28;
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 40px 10%;
+            background-color: #eaf4fc;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .feature-card img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: #4CAF50; /* Change h3 color to green */
+            margin-bottom: 10px;
+            text-decoration: none; /* No underline by default */
+        }
+        .feature-card h3 a {
+            color: #4CAF50; /* Make link text green */
+            text-decoration: none; /* No underline by default */
+        }
+        .feature-card h3 a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .feature-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>HealthSpace</h1>
+    <nav>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    function scrollToFeatures() {
+        document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Your Health, Our Priority</h2>
+        <p>Access step tracking, medical advice, emergency assistance, and more at your fingertips.</p>
+        <button onclick="scrollToFeatures()">Get Started</button>
+    </div>
+</section>
+
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <!-- Walking Steps Tracker -->
+    <div class="feature-card">
+        <img src="./resources/walk.png" alt="Walking Icon">
+        <h3><a href="fitness.html">Walking Steps Tracker</a></h3>
+        <p>Track your steps daily and stay motivated on your fitness journey.</p>
+    </div>
+
+    <!-- Nearby Hospitals Locator -->
+    <div class="feature-card">
+        <img src="./resources/hospital.png" alt="Hospital Icon">
+        <h3><a href="https://www.google.com/maps/search/hospitals+near+me">Nearby Hospitals</a></h3>
+        <p>Find nearby hospitals and get quick directions in case of an emergency.</p>
+    </div>
+
+    <!-- Medical Recommendations -->
+    <div class="feature-card">
+        <img src="./resources/care.jpg" alt="Medical Advice Icon">
+        <h3><a href="chat.html">Medical Recommendations</a></h3>
+        <p>Receive personalized health advice from our specialized Gemini AI</p>
+    </div>
+
+    <!-- Accessible Medicine Delivery -->
+    <div class="feature-card">
+        <img src="./resources/deli.png" alt="Medicine Delivery Icon">
+        <h3><a href="deliver.html">Medicine Delivery</a></h3>
+        <p>Order medicines conveniently and have them delivered to your door.</p>
+    </div>
+
+    <!-- Emergency Conditions Management -->
+    <div class="feature-card">
+        <img src="./resources/eme.png" alt="Emergency Icon">
+        <h3><a href="emergency_assistance.html">Emergency Assistance</a></h3>
+        <p>Get instant help during emergencies with one-tap SOS functionality.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 HealthSpace. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
