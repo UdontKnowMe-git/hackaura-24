@@ -13,13 +13,9 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background-color: #f4f6f9;
+            background-color: #f0f4f8;
             color: #333;
-        }
-        header, .features, footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
         /* Header */
@@ -27,17 +23,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #4CAF50, #2e8b57);
             color: white;
-            padding: 20px;
+            padding: 20px 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             font-size: 2rem;
+            font-weight: bold;
         }
         nav ul {
             list-style-type: none;
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
         nav ul li {
             display: inline;
@@ -46,62 +44,82 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
         }
 
         /* Hero Section */
         .hero {
-            background-image: url('https://via.placeholder.com/1200x400');
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://via.placeholder.com/1200x400');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
+            position: relative;
         }
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
         }
         .hero p {
             font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         }
         .hero button {
             margin-top: 15px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 1rem;
-            background-color: #4CAF50;
+            background-color: #ffdd57;
             border: none;
-            color: white;
+            border-radius: 30px;
+            color: #333;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #ffca28;
+            transform: translateY(-3px);
         }
 
         /* Features Section */
         .features {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 40px;
+            gap: 25px;
+            padding: 40px 10%;
+            background-color: #eaf4fc;
         }
         .feature-card {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            padding: 30px;
             text-align: center;
             width: 100%;
-            max-width: 280px;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         .feature-card img {
             width: 80px;
             margin-bottom: 15px;
         }
         .feature-card h3 {
-            font-size: 1.3rem;
-            color: #333;
+            font-size: 1.4rem;
+            color: #4CAF50;
             margin-bottom: 10px;
         }
         .feature-card p {
-            color: #666;
+            color: #555;
             font-size: 1rem;
             line-height: 1.5;
         }
@@ -113,9 +131,23 @@
             background-color: #333;
             color: white;
             margin-top: 40px;
+            font-size: 0.9rem;
         }
         footer p {
-            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -123,7 +155,7 @@
 
 <!-- Header -->
 <header>
-    <h1>HealthCare Portal</h1>
+    <h1>HealthSpace</h1>
     <nav>
         <ul>
             <li><a href="#features">Features</a></li>
@@ -134,44 +166,129 @@
 
 <!-- Hero Section -->
 <section class="hero">
-    <h2>Your Health, Our Priority</h2>
-    <p>Access step tracking, medical advice, emergency assistance, and more at your fingertips.</p>
-    <button onclick="alert('Welcome to HealthCare Portal!')">Get Started</button>
+    <div class="hero-content">
+        <h2>Your Health, Our Priority</h2>
+        <p>Access step tracking, medical advice, emergency assistance, and more at your fingertips.</p>
+        <button onclick="alert('Welcome to HealthSpace!')">Get Started</button>
+    </div>
 </section>
+
+<style>
+    /* Updated Hero Section Styles */
+    .hero {
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+            url('./resources/2.jpg') no-repeat center center / cover;
+        color: white;
+        padding: 120px 20px;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        animation: fadeIn 1.2s ease-out;
+    }
+
+    .hero h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        color: #4CAF50;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        animation: slideInDown 1s ease-out forwards;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        color: #e0e0e0;
+        line-height: 1.6;
+        animation: slideInUp 1.2s ease-out forwards;
+    }
+
+    .hero button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 30px;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+        background-color: #0c4adc;
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Hero Section */
+    @media (max-width: 768px) {
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
 
 <!-- Features Section -->
 <section id="features" class="features">
     <!-- Walking Steps Tracker -->
     <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Walking Icon">
+        <img src="./resources/walk.png" alt="Walking Icon">
         <h3>Walking Steps Tracker</h3>
         <p>Track your steps daily and stay motivated on your fitness journey.</p>
     </div>
 
     <!-- Nearby Hospitals Locator -->
     <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Hospital Icon">
+        <img src="./resources/hospital.png" alt="Hospital Icon">
         <h3>Nearby Hospitals</h3>
         <p>Find nearby hospitals and get quick directions in case of an emergency.</p>
     </div>
 
     <!-- Medical Recommendations -->
     <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Medical Advice Icon">
+        <img src="./resources/care.jpg" alt="Medical Advice Icon">
         <h3>Medical Recommendations</h3>
         <p>Receive personalized health advice based on your symptoms.</p>
     </div>
 
     <!-- Accessible Medicine Delivery -->
     <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Medicine Delivery Icon">
+        <img src="./resources/deli.png" alt="Medicine Delivery Icon">
         <h3>Medicine Delivery</h3>
         <p>Order medicines conveniently and have them delivered to your door.</p>
     </div>
 
     <!-- Emergency Conditions Management -->
     <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Emergency Icon">
+        <img src="./resources/eme.png" alt="Emergency Icon">
         <h3>Emergency Assistance</h3>
         <p>Get instant help during emergencies with one-tap SOS functionality.</p>
     </div>
@@ -179,7 +296,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>© 2024 heathspace. All Rights Reserved.</p>
+    <p>© 2024 HealthSpace. All Rights Reserved.</p>
 </footer>
 
 </body>
