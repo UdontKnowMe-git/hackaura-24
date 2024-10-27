@@ -7,16 +7,26 @@
   
   body {
     background: url('https://source.unsplash.com/1600x900/?fitness') no-repeat center center/cover;
-    display: flex;
     justify-content: center;
+    margin: 0;
+    margin-left: px;
+    padding: 0;
     align-items: center;
     height: 100vh;
     color: #fff;
   }
+
+  header {
+    background: #4CAF50;
+    color: white;
+    padding: 8px ;
+    text-align: center;
+}
   
   .container {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
+    margin-left: 37%;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -103,4 +113,14 @@
   .chart-container {
     width: 100%;
     margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #4CAF50;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }

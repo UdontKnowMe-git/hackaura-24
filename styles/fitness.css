@@ -1,8 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f3f4f6;
+
     margin: 0;
-    padding: 20px;
+    padding: 0px;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    color: 
 }
 
 .container {
@@ -49,4 +58,14 @@ button:hover {
 
 .chart {
     margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
